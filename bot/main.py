@@ -1,9 +1,10 @@
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher
+from aiogram import Bot, Dispatcher, Router
 
 from bot.misc.env import settings
 from bot.web.server import init_web_server
+from bot.handlers.main import register_all_handlers
 
 # Настройка логирования
 logging.basicConfig(
@@ -25,6 +26,11 @@ async def main():
         logger.info(f"Web server started on {settings.web_config['host']}:{settings.web_config['port']}")
 
         # Запуск бота
+        logger.info("Register bot handlers...")
+        main_router = Router()
+        await register_all_handlers(main_router)
+        dp.include_router(main_router)
+
         logger.info("Starting bot...")
         await dp.start_polling(bot)
 
