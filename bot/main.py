@@ -5,6 +5,7 @@ from aiogram import Bot, Dispatcher, Router
 from bot.misc.env import settings
 from bot.web.server import init_web_server
 from bot.handlers.main import register_all_handlers
+from bot.database.models import register_models
 
 # Настройка логирования
 logging.basicConfig(
@@ -24,6 +25,10 @@ async def main():
         logger.info("Starting web server...")
         await init_web_server(settings.web_config, bot)
         logger.info(f"Web server started on {settings.web_config['host']}:{settings.web_config['port']}")
+
+        # Регистрация моделей
+        logger.info("Register models...")
+        await register_models()
 
         # Запуск бота
         logger.info("Register bot handlers...")
