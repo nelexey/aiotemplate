@@ -26,14 +26,10 @@ async def main():
         await init_web_server(settings.web_config, bot)
         logger.info(f"Web server started on {settings.web_config['host']}:{settings.web_config['port']}")
 
-        # Регистрация моделей
-        logger.info("Register models...")
-        await register_models()
-
         # Запуск бота
         logger.info("Register bot handlers...")
         main_router = Router()
-        await register_all_handlers(main_router)
+        await register_all_handlers(main_router, bot=bot)
         dp.include_router(main_router)
 
         logger.info("Starting bot...")
