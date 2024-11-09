@@ -41,5 +41,4 @@ class Settings(BaseSettings):
         return f"http://{self.WEB_SERVICE_HOST}:{self.WEB_SERVICE_PORT}"
 
 
-
 settings = Settings(_env_file='.env')
