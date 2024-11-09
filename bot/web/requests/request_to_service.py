@@ -2,7 +2,7 @@ from .Service import Service
 
 from bot.misc.env import settings
 
-some_service = Service(settings.some_service['url'])
+some_service = Service(settings.some_service_url)
 
 async def example_req(param1: int = None,
                       param2: int = None) -> dict:
