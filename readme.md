@@ -1,5 +1,5 @@
 <p>
-  <img src="images/logo.svg" alt="Logo" width="100%" style="padding: 10%"/>
+  <img src="images/logo.png" alt="Logo" width="100%" style="padding: 10%"/>
 </p>
 
 ---
