@@ -1,8 +1,8 @@
 <p>
-  <img src="images/logo.png" alt="Logo" width="100%" style="padding: 10%"/>
+  <img src="images/logo.png" alt="Logo" width="50%"/>
 </p>
 
-# Aiotemplate
+##
 
 **Aiotemplate** is a robust starting point for building scalable, production-ready Telegram bots using the [aiogram](https://github.com/aiogram/aiogram) framework. This template provides a clean, modular structure that is optimized for easy scaling, debugging, and deployment. It’s ideal for developers looking to streamline the development of complex bots with integrated web functionality and database support.
 
