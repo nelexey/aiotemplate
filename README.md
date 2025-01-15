@@ -98,12 +98,21 @@ aiotemplate/
 
 Пример файла `.env`:
 ```plaintext
-BOT_TOKEN=токен_бота
-DB_USER=пользователь_бд
-DB_PASS=пароль_бд
+BOT_TOKEN=your_bot_token_here
+
+DB_USER=your_db_user
+DB_PASS=your_db_password
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=имя_бд
+DB_NAME=your_db_name
+
+WEB_HOST=localhost
+WEB_PORT=8000
+WEB_TIMEOUT=1
+WEB_MAX_CONNECTIONS=10000000
+
+WEB_SERVICE_HOST=https://example.com/api
+WEB_SERVICE_PORT=8081
 ```
 
 ## Лицензия
