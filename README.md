@@ -23,7 +23,7 @@
 
 2. **Создание и активация виртуальной среды**:
     ```bash
-    python3.12 -m venv env
+    python -m venv env
     
     # Для Linux/MacOS:
     source env/bin/activate
